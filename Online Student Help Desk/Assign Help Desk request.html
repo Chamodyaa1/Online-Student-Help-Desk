@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Help Desk Categories</title>
+	<link rel="stylesheet" href="css\navigation.css"/>
+	<link rel="stylesheet" href="css\logo.css"/>
+	<link rel="stylesheet" href="css\footer.css"/>
+	<link rel="stylesheet" href="css\pagesimage.css"/>
+
+	<link rel="icon" href="images\Logo\title bar icon.png" type = "image/x-icon"/>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+			margin:40px;
+			background-image: url("images/body/back.png");
+        }
+
+        .container {
+            display: flex;
+            max-width: 800px;
+        }
+
+        .categories {
+            flex: 1;
+            background-color: #a1c0de;
+			margin:0 20px;
+			width:80%;
+            padding: 20px;
+            border-right: 1px solid #f5eeee;
+        }
+
+        /* Styles for the category list */
+        .category-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #eef9f2;
+            padding: 10px;
+        }
+
+        .category-list li:hover {
+            background-color: #e3dddd;
+        }
+
+        /* Styles for the filled registration form */
+        .help-request {
+            display: none;
+        }
+
+        .help-request.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showHelpRequest(categoryId) {
+            var helpRequestForms = document.getElementsByClassName("help-request");
+            for (var i = 0; i < helpRequestForms.length; i++) {
+                helpRequestForms[i].classList.remove("active");
+            }
+            var selectedForm = document.getElementById(categoryId);
+            selectedForm.classList.add("active");
+        }
+    </script>
+</head>
+
+<body>
+
+	<img id="logo" src="images\Logo\logo.png" alt="Logo" >
+
+	<div class="navigation">
+		<a href="login.html">Login</a>
+		<a href="about us.html">About Us</a>
+		<a href="contact us.html">Contact us</a>
+		<a class="active" href="help desk.hltm">Help Desk</a>
+		<a href="index.html">Home</a>
+	</div>
+
+    <div class="container">
+        <div class="categories">
+            <h2>Assign Help Desk Request</h2>
+            <ul class="category-list">
+                <li onclick="showHelpRequest('category1')">Help Desk Request #1    Help desk Request Category#1</li>
+                <li onclick="showHelpRequest('category2')">Help Desk Request #2    Help desk Request Category#2</li>
+                <li onclick="showHelpRequest('category3')">Help Desk Request #3    Help desk Request Category#3</li>
+                <li onclick="showHelpRequest('category4')">Help Desk Request #4    Help desk Request Category#4</li>
+                <li onclick="showHelpRequest('category5')">Help Desk Request #5    Help desk Request Category#5</li>
+                <li onclick="showHelpRequest('category6')">Help Desk Request #6    Help desk Request Category#6</li>
+                <li onclick="showHelpRequest('category7')">Help Desk Request #7    Help desk Request Category#7</li>
+                <li onclick="showHelpRequest('category8')">Help Desk Request #8    Help desk Request Category#8</li>
+                <li onclick="showHelpRequest('category9')">Help Desk Request #9    Help desk Request Category#9</li>
+                <li onclick="showHelpRequest('category10')">Help Desk Request #10    Help desk Request Category#10</li>
+            </ul>
+        </div>
+        <div class="Help_request">
+            <div id="category1" class="help-request active">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+            <div id="category2" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category3" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category4" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category5" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category6" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category7" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category8" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category9" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+			
+			 <div class="Help_request">
+            <div id="category10" class="help-request">
+                 <form style="background-color: #a1c0de">
+<fieldset>
+<input type="text" id="name" placeholder="Name" required>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" placeholder="E-mail Address" required>
+<br>
+<br>
+<input type="text" id="reg_no" placeholder="Contact Number" required>
+<br>
+<br>
+<input type="text" id="Number" placeholder="Help Request category" required>
+<br>
+<br>
+<p align="center">Subject</p>
+<textarea name="description" id="Categoty_Description" placeholde="" rows="10" cols="50"></textarea>
+<br>
+<label for="myfile">Attachment</label>
+<input type="file" id="myfile" name="myfile">
+</fieldset>
+<br>
+<label>Assign a Help Desk Agent</label>
+<br>
+<select>
+  <option value="Help Desk Agent#1">Help Desk Agent#1</option>
+  <option value="Help Desk Agent#2">Help Desk Agent#2</option>
+  <option value="Help Desk Agent#3">Help Desk Agent#3</option>
+  <option value="Help Desk Agent#4">Help Desk Agent#4</option>
+  <option value="Help Desk Agent#5">Help Desk Agent#5</option>
+  <option value="Help Desk Agent#6">Help Desk Agent#6</option>
+  <option value="Help Desk Agent#7">Help Desk Agent#7</option>
+  <option value="Help Desk Agent#8">Help Desk Agent#8</option>
+  <option value="Help Desk Agent#9">Help Desk Agent#9</option>
+  <option value="Help Desk Agent#10">Help Desk Agent#10</option>
+</select>
+<br>
+<br>
+<label>Add Notes(Optional)</label>
+<br>
+<textarea name="description" id="Additional_Note" placeholde="Tap here..." rows="10" cols="50"></textarea>
+<br>
+<div class="input2">
+			<input class="input-btn"type="submit" Value="Submit">
+		</div>
+
+</form>
+            </div>
+          
+        </div>
+    </div>
+
+	<footer>
+		<p id="footertext">Online Student Help Desk™<br>Terms - Privacy Policy©<br>All rights Reserved</p>
+	
+		<div class="footering">
+		  <ul>
+			<a href="https://www.instagram.com">
+			  <img src="images/Footer/instagram.png" alt="Instagram" />
+			</a>
+			<a href="https://www.facebook.com">
+			  <img src="images/Footer/facebook.png" alt="Facebook" />
+			</a>
+			<a href="https://www.twitter.com">
+			  <img src="images/Footer/twitter.png" alt="Twitter" />
+			</a>
+			<a href="https://www.gmail.com">
+			  <img src="images/Footer/mail.png" alt="Email" />
+			</a>
+			<a href="https://maps.google.com">
+			  <img src="images/Footer/map.png" alt="Map" />
+			</a>
+			<a href="tel:+1234567890">
+			  <img src="images/Footer/phone.png" alt="Click to Call" />
+			</a>
+		  </ul>
+		</div>
+	  </footer>
+
+</body>
+
+</html>

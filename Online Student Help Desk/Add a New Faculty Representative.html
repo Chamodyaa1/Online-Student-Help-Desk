@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css\navigation.css"/>
+	<link rel="stylesheet" href="css\logo.css"/>
+	<link rel="stylesheet" href="css\footer.css"/>
+	<link rel="stylesheet" href="css\pagesimage.css"/>
+	<link rel="stylesheet" href="css\body.css"/>
+
+	<title>Add a New Faculty Representative</title>
+
+	<link rel="icon" href="images\Logo\title bar icon.png" type = "image/x-icon"/>
+
+	<style>body{
+		background-image: url("images//body/back.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}</style
+	
+
+</head>	
+
+<body>
+
+	<img id="logo" src="images\Logo\logo.png" alt="Logo" >
+
+	<div class="navigation">
+		<a href="login.html">Login</a>
+		<a href="about us.html">About Us</a>
+		<a href="contact us.html">Contact us</a>
+		<a class="active" href="help desk.hltm">Help Desk</a>
+		<a href="index.html">Home</a>
+	</div>
+
+		<form>
+		<div class="container">
+			<div class="box">
+					
+			 <div class="input1">
+				<div class="input2">	
+					<h2 style="color:#006080"><center>Add a New Faculty Representative<center></h2>
+						<br>
+					<input type="text" class="input-box" id="First_name" placeholder="First Name*" class="input_field" required>
+		&nbsp;&nbsp;&nbsp;
+					<input type="text" class="input-box" id="Last_name" placeholder="Last Name*" required>
+		
+				</div>
+		<br>
+		
+				<div class="input2">	
+					<input type="email" class="input-box"  id="contact-email" onkeyup="validateEmail()" placeholder="E-mail Address*" required>
+					<span id="email-error"></span>
+					</div>
+		<br>
+		
+				<div class="input2">	
+					<input type="text" class="input-box" id="Rep_ID" placeholder="Faculty Representative ID*" required>
+				</div>
+		<br>
+		
+				<div class="input2">	
+					<input type="text" class="input-box" id="Contact_No" placeholder="Phone Number*" required>
+				</div>
+		<br><br>
+		<div class="input2">
+			<input class="input-btn"type="submit" Value="Add to The System">
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		</form>
+	<footer>
+
+		<p id="footertext">Online Student Help Desk™<br>Terms - Privacy Policy©<br>All rights Reserved</p>
+
+		<div class="footering">
+			<ul>
+
+				<a href="https://www.instagram.com">
+					<img src="images\Footer\instagram.png" alt="Instagram" />
+				</a>
+				<a href="https://www.facebook.com">
+					<img src="images\Footer\facebook.png" alt="Facebook" />
+				</a>
+				<a href="https://www.twitter.com">
+					<img src="images\Footer\twitter.png" alt="Twitter" />
+				</a>
+				<a href="https://www.gmail.com">
+					<img src="images\Footer\mail.png" alt="Email" />
+				</a>
+				<a href="https://maps.google.com">
+					<img src="images\Footer\map.png" alt="Map" />
+				</a>
+				<a href="tel:+1234567890">
+					<img src="images\Footer\phone.png" alt="Click to Call" />
+				</a>
+
+			</ul>
+		</div>
+
+	</footer>
+
+	<script>
+    function validateEmail() {
+      var email = document.getElementById('contact-email').value;
+      var emailError = document.getElementById('email-error');
+
+      if (!email.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)) {
+        emailError.innerHTML = 'Invalid email';
+        return false;
+      }
+
+      emailError.innerHTML = '';
+      return true;
+    }
+
+</script>
+
+
+</body>
+</html>

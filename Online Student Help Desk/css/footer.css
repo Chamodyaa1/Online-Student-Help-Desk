@@ -1,0 +1,26 @@
+#footertext {
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #778DA9;
+	color: #FFFFFF;
+	font-family: Calibri;
+	font-size: 12px;
+	margin: 0;
+	left: 0;
+	right: 0;
+}
+
+.footering {
+	display: inline-block;
+	margin: -12px;
+	left: 2px;
+	right: 0;
+	border-radius: 0%;
+	position: fixed;
+	bottom: 0;
+}
+
+

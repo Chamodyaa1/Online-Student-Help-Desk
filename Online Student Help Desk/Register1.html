@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/navigation.css"/>
+  <link rel="stylesheet" href="css/logo.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/pagesimage.css"/>
+  <link rel="stylesheet" href="css/body.css"/>
+
+  <title>Register</title>
+
+  <link rel="icon" href="images/Logo/title bar icon.png" type="image/x-icon"/>
+
+  <style>
+    body {
+      background-image: url("images/body/sol2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="logo" src="images/Logo/logo.png" alt="Logo" >
+
+  <div class="navigation">
+    <a class="active" href="login.html">Login</a>
+    <a href="about us.html">About Us</a>
+    <a href="contact us.html">Contact us</a>
+    <a href="help desk.hltm">Help Desk</a>
+    <a href="index.html">Home</a>
+  </div>
+
+  <form>
+    <div class="container">
+      <div class="box">
+        <div class="input1">
+          <div class="input2">
+            <h2 style="color:#006080"><center>Register</center></h2>
+            <br>
+            <input class="input-box" type="text" id="First_Name" placeholder="First Name" required>
+
+            <input class="input-box" type="text" id="Last_Name" placeholder="Last Name" required>
+          </div>
+          <br>
+
+          <div class="input2">
+            <input class="input-box" type="email" placeholder="E-mail" id="contact-email" onkeyup="validateEmail()" required>
+            <span id="email-error"></span>
+          </div>
+          <br>
+
+          <div class="input2">
+            <input class="input-box" type="text" id="Student_ID" placeholder="University ID" required>
+          </div>
+          <br>
+
+          <div class="input2">
+            <input class="input-box" type="password" id="Password" placeholder="Password" pattern="[0-9]{}">
+          </div>
+          <br>
+
+          <div class="input2">
+            <input class="input-box" id="confirmPassword" type="password" placeholder="Confirm Password" onkeyup="checkPassword()">
+            <span id="password-message"></span>
+          </div>
+          <br>
+
+          <div class="input2">
+            <input class="input-btn" onclick="validateForm(event)" type="submit" Value="Register">
+          </div>
+          <br>
+          <br>
+
+          <div>Already have an account? <a href="login.html">Login</a></div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <footer>
+    <p id="footertext">Online Student Help Desk™<br>Terms - Privacy Policy©<br>All rights Reserved</p>
+
+    <div class="footering">
+      <ul>
+        <a href="https://www.instagram.com">
+          <img src="images/Footer/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com">
+          <img src="images/Footer/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com">
+          <img src="images/Footer/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.gmail.com">
+          <img src="images/Footer/mail.png" alt="Email" />
+        </a>
+        <a href="https://maps.google.com">
+          <img src="images/Footer/map.png" alt="Map" />
+        </a>
+        <a href="tel:+1234567890">
+          <img src="images/Footer/phone.png" alt="Click to Call" />
+        </a>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function validateEmail() {
+      var email = document.getElementById('contact-email').value;
+      var emailError = document.getElementById('email-error');
+
+      if (!email.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)) {
+        emailError.innerHTML = 'Invalid email';
+        return false;
+      }
+
+      emailError.innerHTML = '';
+      return true;
+    }
+
+    function checkPassword() {
+      var password = document.getElementById("Password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var message = document.getElementById("password-message");
+
+      if (password !== confirmPassword) {
+        message.textContent = "Passwords don't match";
+      } else {
+        message.textContent = "";
+      }
+    }
+
+    function validateForm(event) {
+      event.preventDefault();
+
+      var password = document.getElementById("Password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password === "" || confirmPassword === "") {
+        alert("Password is required");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords don't match");
+        return;
+      }
+
+      // Submit the form if all validations pass
+      document.forms[0].submit();
+    }
+  </script>
+</body>
+</html>
